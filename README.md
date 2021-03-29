@@ -4,4 +4,4 @@ This plugin creates a "Poll" WordPress widget that allows users to vote on their
 
 ### How to Use
 
-The widget cam be tested here: https://vue.nicolesmith.dev/
+The widget can be tested here: https://vue.nicolesmith.dev/
