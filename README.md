@@ -21,6 +21,6 @@ One year from my initial commit! I've entirely overhauled the plugin.
 -   Compiling JavaScript and CSS assets via Webpack Mix
 -   Organized PHP functions via includes
 
-#### March 29, 2021
+#### March 28, 2021
 
 -   Initial commit
