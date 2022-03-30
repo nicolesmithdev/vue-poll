@@ -1,0 +1,61 @@
+$color-boulder: #777777;
+$color-gallery: #eeeeee;
+$color-malibu: #71c9f8;
+$color-mine-shaft: #333333;
+
+.widget_voting_widget {
+    ul {
+        li {
+            border: 2px solid $color-malibu;
+            border-radius: 5px;
+            color: $color-malibu;
+            padding: 0 7px;
+        }
+        &.poll li {
+            color: $color-malibu;
+            cursor: pointer;
+            font-weight: bold;
+            &:hover {
+                background-color: $color-malibu;
+                color: white;
+            }
+        }
+    }
+}
+
+.percentage-bar {
+    background-color: $color-gallery;
+    display: block;
+    height: 1em;
+    .selected & {
+        background-color: $color-malibu;
+    }
+}
+
+.widget_voting_widget .results ul li {
+    border-color: $color-gallery;
+    color: $color-mine-shaft;
+    position: relative;
+    &.selected {
+        border-color: $color-malibu;
+    }
+    > span:first-child {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+    }
+    > span:last-child {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        z-index: 1;
+    }
+}
+
+.total-votes {
+    color: $color-boulder;
+    font-size: 15px;
+    margin-top: 1em;
+}

@@ -1,0 +1,34 @@
+{
+    "name": "vueplugin",
+    "version": "1.0.0",
+    "description": "This plugin creates a \"Poll\" WordPress widget that allows users to vote on their favorite blog post. Powered by the WordPress REST API and Vue.js.",
+    "main": "index.js",
+    "scripts": {
+        "dev": "mix",
+        "watch": "mix watch",
+        "prod": "mix --production"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/nicolesmithdev/vue-poll.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/nicolesmithdev/vue-poll/issues"
+    },
+    "homepage": "https://github.com/nicolesmithdev/vue-poll#readme",
+    "devDependencies": {
+        "cross-env": "^7.0.3",
+        "laravel-mix": "^6.0.43",
+        "resolve-url-loader": "^5.0.0",
+        "sass-loader": "^12.6.0",
+        "vue-loader": "^15.9.8",
+        "vue-template-compiler": "^2.6.14"
+    },
+    "dependencies": {
+        "sass": "^1.49.9",
+        "vue": "^2.6.14"
+    },
+    "keywords": []
+}
