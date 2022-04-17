@@ -27,53 +27,42 @@ export default {
         this.fetchPoll();
     },
     methods: {
-        fetchPoll() {
+        async fetchPoll() {
             var url = '/wp-json/wp/v2/posts?filter[orderby]=date';
-            fetch(url)
-                .then((response) => {
-                    return response.json();
-                })
-                .then((data) => {
-                    this.posts = data;
-                    this.loading = false;
-                });
+            const response = await fetch(url);
+            const data = await response.json();
+            this.posts = data;
+            this.loading = false;
         },
-        addVote(event) {
+        async addVote(event) {
             const postID = event.target.id;
             const url = '/wp-json/wp/v2/posts/' + postID;
 
             // First get how many votes are attached to the post ID
-            fetch(url)
-                .then((response) => {
-                    return response.json();
-                })
-                .then((data) => {
-                    // Next increment the vote
-                    fetch(url, {
-                        method: 'POST',
-                        headers: {
-                            Authorization:
-                                'Basic ' +
-                                btoa(
-                                    specialObj.appUser +
-                                        ':' +
-                                        specialObj.appPass
-                                ),
-                            'Content-Type': 'application/json',
-                            'X-WP-Nonce': specialObj.security,
-                        },
-                        body: JSON.stringify({
-                            votes: ++data.votes,
-                        }),
-                    })
-                        .then((res) => {
-                            localStorage.setItem('VuePoll voted', postID);
-                            this.$emit('voted', postID);
-                        })
-                        .catch((err) => {
-                            console.log('error', err);
-                        });
-                });
+            const response = await fetch(url);
+            const data = await response.json();
+
+            // Next increment the vote
+            const increment = await fetch(url, {
+                method: 'POST',
+                headers: {
+                    Authorization:
+                        'Basic ' +
+                        btoa(specialObj.appUser + ':' + specialObj.appPass),
+                    'Content-Type': 'application/json',
+                    'X-WP-Nonce': specialObj.security,
+                },
+                body: JSON.stringify({
+                    votes: ++data.votes,
+                }),
+            });
+
+            if (increment) {
+                localStorage.setItem('VuePoll voted', postID);
+                this.$emit('voted', postID);
+            } else {
+                console.log('error', err);
+            }
         },
     },
 };

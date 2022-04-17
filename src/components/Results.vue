@@ -49,16 +49,12 @@ export default {
         },
     },
     methods: {
-        fetchPosts() {
+        async fetchPosts() {
             var url = '/wp-json/wp/v2/posts';
-            fetch(url)
-                .then((response) => {
-                    return response.json();
-                })
-                .then((data) => {
-                    this.posts = data;
-                    this.loading = false;
-                });
+            const response = await fetch(url);
+            const data = await response.json();
+            this.posts = data;
+            this.loading = false;
         },
         percentage(count) {
             return Math.round((count / this.totalVotes) * 100) + '%';
