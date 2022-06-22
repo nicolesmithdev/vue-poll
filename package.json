@@ -20,14 +20,14 @@
     "homepage": "https://github.com/nicolesmithdev/vue-poll#readme",
     "devDependencies": {
         "cross-env": "^7.0.3",
-        "laravel-mix": "^6.0.43",
+        "laravel-mix": "^6.0.49",
         "resolve-url-loader": "^5.0.0",
         "sass-loader": "^12.6.0",
         "vue-loader": "^15.9.8",
         "vue-template-compiler": "^2.6.14"
     },
     "dependencies": {
-        "sass": "^1.49.9",
+        "sass": "^1.52.3",
         "vue": "^2.6.14"
     },
     "keywords": []
