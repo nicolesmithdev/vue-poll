@@ -1,6 +1,6 @@
 {
     "name": "vueplugin",
-    "version": "1.0.0",
+    "version": "2.1.0",
     "description": "This plugin creates a \"Poll\" WordPress widget that allows users to vote on their favorite blog post. Powered by the WordPress REST API and Vue.js.",
     "main": "index.js",
     "scripts": {

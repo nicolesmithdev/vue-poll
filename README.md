@@ -12,11 +12,15 @@ This plugin creates a "Poll" WordPress widget that allows users to vote on their
 
 ## Changelog
 
-### January 25, 2023
+### 2.1.0
+
+**January 25, 2023**
 
 -   Upgrade from Vue 2 to Vue 3
 
-### March 30, 2022
+### 2.0.0
+
+**March 30, 2022**
 
 One year from my initial commit! I've entirely overhauled the plugin.
 
@@ -25,6 +29,8 @@ One year from my initial commit! I've entirely overhauled the plugin.
 -   Compiling JavaScript and CSS assets via Webpack Mix
 -   Organized PHP functions via includes
 
-### March 28, 2021
+### 1.0.0
+
+**March 28, 2021**
 
 -   Initial commit
