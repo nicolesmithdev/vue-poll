@@ -1,6 +1,6 @@
-import Vue from 'vue';
+import { createApp } from 'vue';
 import Widget from './Widget';
 
-new Vue({
-    render: (h) => h(Widget),
-}).$mount('#app');
+const app = createApp(Widget);
+
+app.mount('#app');
