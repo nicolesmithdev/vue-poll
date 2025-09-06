@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Poll from './components/Poll';
-import Results from './components/Results';
+import Poll from './components/Poll.vue';
+import Results from './components/Results.vue';
 
 export default {
     data() {

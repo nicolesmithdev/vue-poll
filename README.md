@@ -12,6 +12,10 @@ This plugin creates a "Poll" WordPress widget that allows users to vote on their
 
 ## Changelog
 
+### 2.2.0
+
+-   Migrate from Webpack to Vite
+
 ### 2.1.0
 
 **January 25, 2023**
